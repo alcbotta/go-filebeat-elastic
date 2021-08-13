@@ -1,0 +1,10 @@
+version: "3.1"
+services:
+  devserver:
+    build:
+      context: ./
+      dockerfile: Dockerfile-dev-vscode.dockerfile
+    working_dir: /opt/project
+    volumes:
+      - .:/opt/project
+    command: sleep infinity

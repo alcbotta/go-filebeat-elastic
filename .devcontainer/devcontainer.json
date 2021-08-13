@@ -1,0 +1,20 @@
+{
+  "name": "go-filebeat-elastic",
+  "dockerComposeFile": ["../docker-compose-dev-vscode.yml"],
+  "service": "devserver",
+  "workspaceFolder": "/opt/project",
+  "shutdownAction": "none",
+  "extensions": ["golang.Go"],
+  "remoteUser": "vscode",
+  "settings": { 
+		"go.toolsManagement.checkForUpdates": "local",
+		"go.gopath": "/go",
+		"go.useLanguageServer": true
+	},
+  "portsAttributes": {
+		"9000": {
+			"label": "Hello Remote World",
+			"onAutoForward": "notify"
+		}
+	},
+}

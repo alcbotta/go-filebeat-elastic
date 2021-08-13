@@ -1,0 +1,8 @@
+filebeat.autodiscover:
+  providers:
+    - type: docker
+      hints.enabled: true
+      # only containers with co.elastic.logs/enabled: true will be discovered
+      hints.default_config.enabled: false
+output.elasticsearch:
+  hosts: ["elasticsearch:9200"] 
