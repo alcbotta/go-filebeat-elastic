@@ -1,0 +1,1 @@
+This is the code for my article on Medium at: https://medium.com/@alcbotta/logging-your-golang-application-to-elasticsearch-with-filebeat-12197a776ade
