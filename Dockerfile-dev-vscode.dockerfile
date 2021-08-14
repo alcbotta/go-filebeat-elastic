@@ -41,9 +41,11 @@ RUN apt-get update \
         github.com/zmb3/gogetdoc@latest \
         github.com/fatih/gomodifytags@latest  \
         github.com/mgechev/revive@latest  \
-        github.com/go-delve/delve/cmd/dlv@latest 2>&1 \
+        honnef.co/go/tools/cmd/staticcheck@latest \
+        github.com/go-delve/delve/cmd/dlv@f95340ae1bf9 \
     # Install Go tools
     && mv /tmp/gotools/bin/* /usr/local/bin/ \
+    && cp /usr/local/bin/dlv /go/bin/dlv-dap \
     #
     # Install golangci-lint
     && curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b /usr/local/bin 2>&1 \
